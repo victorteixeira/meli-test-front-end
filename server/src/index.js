@@ -1,11 +1,15 @@
 import express from 'express';
+import { PORT } from './config/constants';
+
+import searchController from './controllers/search.controller';
+import itemController from './controllers/item.controller';
+
 const app = express();
-const PORT = 3001;
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
+// ROUTES
+app.get('/api/items', searchController);
+app.get('/api/items/:id', itemController);
 
-app.listen(3001, () => {
+app.listen(PORT, () => {
     console.log(`Listen on port: ${PORT}`);
 });
