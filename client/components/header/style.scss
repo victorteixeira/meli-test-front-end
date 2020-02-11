@@ -1,0 +1,29 @@
+@import '../styles/reset.scss';
+@import '../styles/colors.scss';
+@import '../styles/variables.scss';
+
+.header{
+    display: flex;
+    background-color: $yellow;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+
+    &__container{
+        width: $container;
+        display: flex;
+
+        &__logo{
+            width: 53px;
+            height: 36px;
+            background: url('/imgs/Logo_ML.png') no-repeat center;
+            text-indent: -9999px;
+            margin-right: 20px;
+        }
+
+        > input{
+            flex-grow: 1;
+        }
+    }
+}
