@@ -6,6 +6,12 @@ import itemController from './controllers/item.controller';
 
 const app = express();
 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
+
 // ROUTES
 app.get('/api/items', searchController);
 app.get('/api/items/:id', itemController);
