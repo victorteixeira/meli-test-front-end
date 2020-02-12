@@ -25,7 +25,7 @@ const Header = props => {
         <header className="header">
             <div className="header__container">
                 <Link href="/">
-                    <a className="header__container__logo" title="Mercado Livre">Mercado Livre</a>
+                    <a href="/" className="header__container__logo" title="Mercado Livre">Mercado Livre</a>
                 </Link>
                 <form onSubmit={onSubmit} className="header__container__form">
                     <input name="search" type="text" className="header__container__input" placeholder="Nunca dejes de buscar" defaultValue={search} onChange={onChange} />

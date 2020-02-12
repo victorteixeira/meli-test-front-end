@@ -7,7 +7,7 @@ const ListItem = props => {
     return (
         <div className="listItem">
             <Link href="/items/[id]" as={`/items/${props.item.id}`}>
-                <a>
+                <a href={`/items/${props.item.id}`}>
                     <img className="listItem__imageItem" src={props.item.picture} alt={props.item.title}/>
                     <div className="listItem__details">
                         <div className="listItem__details__price">

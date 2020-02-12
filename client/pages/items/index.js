@@ -22,10 +22,16 @@ const getItems = items => {
 const Index = props => {
     return (
         <Layout>
-            <Breadcrumb categories={props.data.categories}/>
-            <Main>
-                {getItems(props.data.items)}
-            </Main>
+            {props.data && props.data.items && props.data.items.length ?
+                <>
+                    <Breadcrumb categories={props.data.categories}/>
+                    <Main>
+                        {getItems(props.data.items)}
+                    </Main>
+                </>
+            :
+                ''
+            }
         </Layout>
     )
 };
