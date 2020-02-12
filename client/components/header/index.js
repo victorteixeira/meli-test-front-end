@@ -2,7 +2,6 @@ import React from 'react';
 import './style.scss';
 
 export default props => {
-    console.log(props);
     return (
         <header className="header">
             <div className="header__container">

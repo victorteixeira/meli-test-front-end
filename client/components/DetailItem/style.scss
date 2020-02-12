@@ -1,0 +1,61 @@
+@import '../styles/colors.scss';
+
+.detailItem {
+
+    &__top {
+        display: flex;
+
+        &__imageItem {
+            max-width: 680px;
+            width: 100%;
+        }
+
+        &__info {
+            margin-top: 32px;
+
+
+            &__state {
+                font-size: 14px;
+                margin-bottom: 16px;
+            }
+
+            &__title {
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            &__price {
+                font-size: 46px;
+                margin: 32px 0;
+
+                &__decimals {
+                    font-size: 22px;
+                    vertical-align: top;
+                }
+            }
+
+            &__button {
+                background-color: $blue;
+                border-radius: 4px;
+                border: none;
+                color: $white;
+                cursor: pointer;
+                font-size: 18px;
+                height: 40px;
+                outline: none;
+                width: 100%;
+            }
+        }
+    }
+
+    &__description {
+        &__title {
+            font-size: 28px;
+            margin: 32px 0;
+        }
+
+        &__description {
+            font-size: 16px;
+        }
+    }
+}
