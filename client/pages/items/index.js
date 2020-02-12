@@ -1,40 +1,46 @@
 import React from 'react';
 import fetch from 'node-fetch';
-import '../../components/styles/globals.scss';
-import Header from '../../components/Header';
+import Layout from '../../components/Layout';
 import Breadcrumb from '../../components/Breadcrumb';
 import Main from '../../components/Main';
 import ListItem from '../../components/ListItem';
 
-const Index = ({ data = {}, query = {} }) => (
-    <>
-        <Header search={query.search}/>
-        {query.search ? (
+const getItems = items => {
+    if (items) {
+        return (
             <>
-                <Breadcrumb categories={data.categories}/>
-                <Main>
-                    <ListItem/>
-                    <ListItem/>
-                    <ListItem/>
-                    <ListItem/>
-                </Main>
-                Busca: {query.search}
+                {items.map(item => {
+                    return (<ListItem key={item.id} item={item}/>)
+                })}
             </>
-        ) : (<></>)}
-    </>
-);
-
-Index.getInitialProps = async ({ query }) => {
-    const q = query.search;
-
-    if (q) {
-        const response = await fetch(`http://localhost:3001/api/items?q=${query.search}`);
-        const data = await response.json();
-
-        return { data, query };
+        )
     }
+    
+    return;
+}
 
-    return {};
+const Index = props => {
+    //const router = useRouter();
+    //const { search } = router.query;
+
+    return (
+        <Layout>
+            <Breadcrumb categories={props.data.categories}/>
+            <Main>
+                {getItems(props.data.items)}
+            </Main>
+        </Layout>
+    )
+};
+
+Index.getInitialProps = async props => {
+    const { query } = props;
+    const { search } = query;
+
+    const response = await fetch(`http://localhost:3001/api/items?q=${search}`);
+    const data = await response.json();
+
+    return { search, data };
 }
 
 export default Index;
