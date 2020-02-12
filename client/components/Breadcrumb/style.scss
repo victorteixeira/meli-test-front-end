@@ -1,0 +1,10 @@
+@import '../styles/colors.scss';
+@import '../styles/variables.scss';
+
+.Breadcrumb{
+    color: $grey-light;
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 16px 0;
+    max-width: $container;
+}

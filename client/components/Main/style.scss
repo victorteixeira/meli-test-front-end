@@ -1,0 +1,11 @@
+@import '../styles/colors.scss';
+@import '../styles/variables.scss';
+
+.main {
+    background: $white;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 16px;
+    max-width: $container;
+}
