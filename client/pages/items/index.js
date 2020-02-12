@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import fetch from 'node-fetch';
 import Layout from '../../components/Layout';
 import Breadcrumb from '../../components/Breadcrumb';
@@ -22,6 +23,11 @@ const getItems = items => {
 const Index = props => {
     return (
         <Layout>
+            <Head>
+                <title>{props.search} [Melhor Preço] no Mercado Livre Brasil</title>
+                <meta name="description" content={`Encontre ${props.search} no Mercado Livre Brasil. Descubra a melhor forma de comprar online. Aproveite o frete grátis pelo Mercado Livre Brasil!`}></meta>
+            </Head>
+            
             {props.data && props.data.items && props.data.items.length ?
                 <>
                     <Breadcrumb categories={props.data.categories}/>
