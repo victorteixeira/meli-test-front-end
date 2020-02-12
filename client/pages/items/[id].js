@@ -1,37 +1,29 @@
 import React from 'react';
 import fetch from 'node-fetch';
-import '../../components/styles/globals.scss';
-import Header from '../../components/Header';
+import Layout from '../../components/Layout';
 import Breadcrumb from '../../components/Breadcrumb';
 import Main from '../../components/Main';
 import DetailItem from '../../components/DetailItem';
 
-const Index = ({ data = {}, query = {} }) => (
-    <>
-        <Header/>
-        {query.id ? (
-            <>
-                <Breadcrumb categories={data.categories}/>
-                <Main>
-                    <DetailItem/>
-                </Main>
-            </>
-        ) : (<></>)}
-    </>
-);
+const Index = props => {
+    return (
+        <Layout>
+            <Breadcrumb categories={props.data.categories}/>
+            <Main>
+                <DetailItem key={props.data.item.id} item={props.data.item}/>
+            </Main>
+        </Layout>
+    )
+};
 
-Index.getInitialProps = async ({ query }) => {
-    console.log(query);
-    const q = query.id;
+Index.getInitialProps = async props => {
+    const { query } = props;
+    const { id } = query;
 
-    if (q) {
-        const response = await fetch(`http://localhost:3001/api/items?q=${query.id}`);
-        const data = await response.json();
+    const response = await fetch(`http://localhost:3001/api/items/${id}`);
+    const data = await response.json();
 
-        return { data, query };
-    }
-
-    return {};
+    return { id, data };
 }
 
 export default Index;
