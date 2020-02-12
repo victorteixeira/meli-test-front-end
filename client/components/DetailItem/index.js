@@ -8,7 +8,7 @@ const DetailItem = props => {
                 <img className="detailItem__top__imageItem" src="http://mla-s1-p.mlstatic.com/795446-MLA31847575812_082019-O.jpg" alt=""/>
                 <div className="detailItem__top__info">
                     <div className="detailItem__top__info__state">Nuevo - 234 vendidos</div>
-                    <div className="detailItem__top__info__title">Deco reverse Sombrero Oxford</div>
+                    <h1 className="detailItem__top__info__title">Deco reverse Sombrero Oxford</h1>
                     <div className="detailItem__top__info__price">$ 1.980<span className="detailItem__top__info__price__decimals">00</span></div>
                     <button className="detailItem__top__info__button">Comprar</button>
                 </div>
