@@ -15,14 +15,11 @@ const getItems = items => {
             </>
         )
     }
-    
+
     return;
 }
 
 const Index = props => {
-    //const router = useRouter();
-    //const { search } = router.query;
-
     return (
         <Layout>
             <Breadcrumb categories={props.data.categories}/>

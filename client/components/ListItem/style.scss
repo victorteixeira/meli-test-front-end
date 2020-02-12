@@ -12,7 +12,7 @@
         padding-top: 0;
     }
 
-    > a {
+    >a {
         display: flex;
         flex-grow: 1;
     }
@@ -20,15 +20,22 @@
     &__imageItem {
         border-radius: 4px;
         margin-right: 16px;
+        width: 180px;
+        height: 180px;
     }
 
     &__details {
         flex-grow: 3;
+
         &__price {
             margin-top: 16px;
             margin-bottom: 32px;
             font-size: 24px;
             color: $grey-dark;
+
+            &__shipping {
+                margin-left: 10px;
+            }
         }
 
         &__title {
@@ -38,6 +45,6 @@
 
     &__info {
         flex-grow: 1;
-        margin-top: 32px;;
+        margin-top: 32px;
     }
 }
