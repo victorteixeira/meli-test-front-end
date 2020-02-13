@@ -9,7 +9,7 @@ const DetailItem = props => {
     return (
         <div className="detailItem">
             <div className="detailItem__top">
-                <img className="detailItem__top__imageItem" src="http://mla-s1-p.mlstatic.com/795446-MLA31847575812_082019-O.jpg" alt=""/>
+                <img className="detailItem__top__imageItem" src={props.item.picture} alt=""/>
                 <div className="detailItem__top__info">
                     <div className="detailItem__top__info__state">{props.item.condition} - {sold_quantity} vendidos</div>
                     <h1 className="detailItem__top__info__title">{props.item.title}</h1>

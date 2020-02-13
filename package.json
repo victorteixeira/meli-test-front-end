@@ -1,0 +1,23 @@
+{
+    "name": "global",
+    "version": "1.0.0",
+    "description": "Projeto de front-end para o Mercado Livre",
+    "scripts": {
+        "install:all": "concurrently \"npm run install:client\" \"npm run install:server\"",
+        "install:client": "cd ./client/ && npm install",
+        "install:server": "cd ./server/ && npm install",
+        "start": "concurrently \"npm run prod:client\" \"npm run prod:server\"",
+        "prod:client": "cd ./client/ && npm run build && npm run start",
+        "prod:server": "cd ./server/ && npm run start",
+        "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+        "dev:client": "cd ./client/ && npm run dev",
+        "dev:server": "cd ./server/ && npm run dev"
+
+    },
+    "main": "index.js",
+    "author": "Victor Teixeira",
+    "license": "ISC",
+    "devDependencies": {
+        "concurrently": "^5.1.0"
+    }
+}
