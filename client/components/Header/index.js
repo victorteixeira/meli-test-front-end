@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import './style.scss';
+import Head from 'next/head';
 
 const Header = props => {
     const router = useRouter();
@@ -23,6 +24,11 @@ const Header = props => {
 
     return (
         <header className="header">
+            <Head>
+                {process.env.NODE_ENV !== 'production' && (
+                    <link rel="stylesheet" href={'/_next/static/css/styles.chunk.css?v=' + Date.now()}/>
+                )}
+            </Head>
             <div className="header__container">
                 <Link href="/">
                     <a href="/" className="header__container__logo" title="Mercado Livre">Mercado Livre</a>
