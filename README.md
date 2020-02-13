@@ -38,8 +38,12 @@ npm run install:all
 ```
 npm run dev
 ```
+API will be running at [http://localhost:3001](http://localhost:3001)
+Application will be running at [http://localhost:3000](http://localhost:3000)
 
 #### To Run PRODUCTION:
 ```
 npm run start
 ```
+API will be running at [http://localhost:3001](http://localhost:3001)
+Application will be running at [http://localhost:3000](http://localhost:3000)

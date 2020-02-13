@@ -8,7 +8,7 @@ import DetailItem from '../../components/DetailItem';
 
 const Index = props => {
     const price = new Intl.NumberFormat().format(Math.trunc(props.data.item.price.amount)).replace(',', '.');
-    const decimals = (props.data.item.price.decimals < 10) ? `0${props.data.item.price.decimals}` : props.data.item.price.decimals;
+    const decimals = (props.data.item.price.decimals > 0) ? `${props.data.item.price.decimals.toFixed(2).slice(-2)}` : '00';
     return (
         <Layout>
             <Head>

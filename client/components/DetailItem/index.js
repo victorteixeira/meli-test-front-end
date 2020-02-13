@@ -4,7 +4,7 @@ import './style.scss';
 const DetailItem = props => {
     const sold_quantity = new Intl.NumberFormat().format(Math.trunc(props.item.sold_quantity)).replace(',', '.');
     const price = new Intl.NumberFormat().format(Math.trunc(props.item.price.amount)).replace(',', '.');
-    const decimals = (props.item.price.decimals < 10) ? `0${props.item.price.decimals}` : props.item.price.decimals;
+    const decimals = (props.item.price.decimals > 0) ? `${props.item.price.decimals.toFixed(2).slice(-2)}` : '00';
 
     return (
         <div className="detailItem">
