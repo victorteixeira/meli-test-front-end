@@ -1,8 +1,7 @@
 # Mercado Livre Front-End Test
 
-## How to use
-
-Before use, download and install Node.js v12.13.1 or higher is required.
+### ROOT
+* [Concurrently](https://www.npmjs.com/package/concurrently)
 
 ### Server
 
@@ -18,21 +17,29 @@ Before use, download and install Node.js v12.13.1 or higher is required.
 * [React Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html)
 * [SASS](https://sass-lang.com/) with syntax SCSS
 
-#### To Install:
+## Get started
 
+1 - Project clone
+```
+git clone git@github.com:victorteixeira/meli-test-front-end.git
+```
+
+2 - Install concurrently
 ```
 npm install
+```
+
+3 - Install all project dependencies
+```
 npm run install:all
 ```
 
-#### To Run PROD:
-
-```
-npm run start
-```
-
-#### To Run DEV:
-
+#### To Run DEVELOPMENT:
 ```
 npm run dev
+```
+
+#### To Run PRODUCTION:
+```
+npm run start
 ```
