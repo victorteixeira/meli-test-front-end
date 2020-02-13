@@ -3,7 +3,7 @@ export default (item) => {
 
     let decimal = 0;
     if (item.price.toString().includes('.')){
-        decimal = data.price % 1;
+        decimal = item.price % 1;
     }
 
     let picture = item.thumbnail;
