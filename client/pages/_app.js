@@ -1,6 +1,6 @@
 import React from 'react';
 import App, { Container } from 'next/app';
-import Router from 'next/router';;
+import Router from 'next/router';
 
 // Correção BUG - em DEV o css estava ficando com cache e não atualizava
 Router.events.on('routeChangeComplete', () => {
