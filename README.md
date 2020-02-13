@@ -21,6 +21,7 @@ Before use, download and install Node.js v12.13.1 or higher is required.
 #### To Install:
 
 ```
+npm install
 npm run install:all
 ```
 
